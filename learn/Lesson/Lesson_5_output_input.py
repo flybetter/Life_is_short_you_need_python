@@ -40,8 +40,9 @@ print "new input", f.read(100)
 f.close()
 
 with open("/Users/wubingyu/Downloads/text.txt") as file:
-    for k,v in enumerate(file):
-        print k,v
+    for line in file:
+        print line
+
 
 f=open("/Users/wubingyu/Downloads/text.txt","w+")
 print f.read(100)
