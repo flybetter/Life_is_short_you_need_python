@@ -19,8 +19,61 @@ john.name = 'John Doe'
 john.dept = 'computer lab'
 john.salary = 1000
 
-
 print john.salary
 
-for key,value in {'haha':123,'tony':232}:
-    print key,value
+for key in {'haha': 123, 'tony': 232}:
+    print key
+
+
+class Reverse:
+    def __init__(self, data):
+        self.data = data
+        self.index = len(data)
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index == 0:
+            raise StopIteration
+        self.index = self.index - 1
+        return self.data[self.index]
+
+
+class Reverse:
+    """Iterator for looping over a sequence backwards."""
+
+    def __init__(self, data):
+        self.data = data
+        self.index = len(data)
+
+    def __iter__(self):
+        return self
+
+    def next(self):
+        if self.index == 0:
+            raise StopIteration
+        self.index = self.index - 1
+        return self.data[self.index]
+
+
+rev = Reverse('spam')
+
+for char in rev:
+    print char
+
+s = "test"
+it = iter(s)
+print next(it)
+print next(it)
+print next(it)
+
+print "----------"
+
+def reverse(data):
+    for index in "spam":
+        yield index
+
+
+for char in reverse("spam"):
+    print char
