@@ -142,5 +142,6 @@ print data
 
 # 11.8 十进制浮点数算法
 from decimal import *
+
 print round(Decimal('0.70') * Decimal('1.05'), 2)
-print round(0.70*1.05,2)
+print round(0.70 * 1.05, 2)
