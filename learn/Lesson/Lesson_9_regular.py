@@ -64,6 +64,7 @@ else:
 
 phone = "2004-959-559 # 这就是一个国外的电话"
 num = re.sub('#.*$', '', phone)
+
 print '电话号码是：', num
 
 num = re.sub(r'\D', '', phone)
