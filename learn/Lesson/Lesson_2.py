@@ -30,6 +30,7 @@ print range(10)
 # 4.4 break和continue 语句，以及循环中的else子句
 # 循环可以有一个 else 子句；它在循环迭代完整个列表 (对于 for) 后或执行条件为 false (对于 while) 时执行，
 # 但循环被 break 中止的情况下不会执行。以下搜索素数的示例程序演示了这个子句:
+# 其实for就是一个if的条件 走完了，就会跳出这个条件走到else里面的
 for n in range(2, 10):
     for x in range(2, n):
         if n % x == 0:
@@ -39,6 +40,8 @@ for n in range(2, 10):
         print n, x, "is a prime number"
 
 # else语句是属于for循环之中，不是if语句
+#与循环一起使用时，else子句与try语句的else子句比if语句的具有更多的共同点：
+#try语句的else子句在未出现异常时运行，循环的else子句在未出现break时运行。
 
 for num in range(2, 10):
     if num % 2 == 0:

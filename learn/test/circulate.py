@@ -18,4 +18,10 @@ print words
 print words[:]
 print words
 
+for n in range(2, 10):
+    for x in range(2, n):
+        print "for circulate", x
+    else:
+        print "else", x
+
 

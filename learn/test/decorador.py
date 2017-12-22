@@ -14,6 +14,7 @@ def logged(func):
     def with_logging(*args, **kwargs):
         print func.__name__ + " was called"
         return func(*args, **kwargs)
+
     return with_logging
 
 
@@ -35,3 +36,19 @@ print f.__name__
 print f.__doc__
 
 print f(2)
+
+
+def logging_similar(func):
+    @wraps(func)
+    def with_logging_similar(*args, **kwargs):
+        print "haha", "this is wraps"
+        return func(*args, **kwargs)
+
+    return with_logging_similar
+
+@logging_similar
+def fun_similar(x):
+    """do some similar thing"""
+    print x + x * x
+
+fun_similar(2)
